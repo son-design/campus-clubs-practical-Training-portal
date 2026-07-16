@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Trainings</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body onload="loadTrainings()">
+
+<div class="sidebar">
+
+<h2>Campus Portal</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="clubs.html">Clubs</a>
+<a href="trainings.html" class="active">Trainings</a>
+<a href="applications.html">Applications</a>
+<a href="profile.html">Profile</a>
+<a href="#" onclick="logout()">Logout</a>
+
+</div>
+
+<div class="content">
+
+<h1>Available Trainings</h1>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Title</th>
+
+<th>Description</th>
+
+<th>Mentor</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="trainingBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/trainings.js"></script>
+
+</body>
+
+</html>

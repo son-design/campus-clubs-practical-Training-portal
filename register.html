@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register | Campus Portal</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+<body class="login-page">
+
+<div class="login-container">
+
+<div class="login-card">
+
+<h1>Create Account</h1>
+
+<p>Campus Portal Registration</p>
+
+<form id="registerForm">
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" id="fullName" required>
+</div>
+
+<div class="input-group">
+<label>Username</label>
+<input type="text" id="username" required>
+</div>
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" id="email" required>
+</div>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" id="password" required>
+</div>
+
+<div class="input-group">
+<label>Phone Number</label>
+<input type="text" id="phoneNumber">
+</div>
+
+<div class="input-group">
+<label>Registration Number</label>
+<input type="text" id="registrationNumber">
+</div>
+
+<div class="input-group">
+<label>Year of Study</label>
+
+<select id="yearOfStudy">
+
+<option value="1">Year 1</option>
+<option value="2">Year 2</option>
+<option value="3">Year 3</option>
+<option value="4">Year 4</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+<label>Department</label>
+<input type="text" id="department">
+</div>
+
+<div class="input-group">
+<label>Role</label>
+
+<select id="role">
+
+<option value="STUDENT">Student</option>
+<option value="CLUB_LEADER">Club Leader</option>
+<option value="MENTOR">Mentor</option>
+
+</select>
+
+</div>
+
+<button type="submit">
+
+Register
+
+</button>
+
+<p id="message"></p>
+
+<p>
+
+Already have an account?
+
+<a href="login.html">
+
+Login
+
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/register.js"></script>
+
+</body>
+
+</html>

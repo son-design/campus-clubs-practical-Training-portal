@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Club Leader</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body onload="loadLeaderClubs()">
+
+<div class="sidebar">
+
+<h2>Campus Portal</h2>
+
+<a href="clubs.html" class="active">My Clubs</a>
+<a href="../profile.html">Profile</a>
+<a href="#" onclick="logout()">Logout</a>
+
+</div>
+
+<div class="content">
+
+<h1>Club Management</h1>
+
+<div class="card">
+
+<h2>Create New Club</h2>
+
+<input
+id="name"
+type="text"
+placeholder="Club Name">
+
+<input
+id="category"
+type="text"
+placeholder="Category">
+
+<textarea
+id="description"
+placeholder="Description"></textarea>
+
+<button onclick="createClub()">
+
+Create Club
+
+</button>
+
+</div>
+
+<br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Name</th>
+
+<th>Category</th>
+
+<th>Leader</th>
+
+<th>Members</th>
+
+</tr>
+
+</thead>
+
+<tbody id="clubTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/leader-clubs.js"></script>
+
+</body>
+
+</html>

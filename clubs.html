@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clubs</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body onload="initClubs()">
+
+<div class="sidebar">
+
+<h2>Campus Portal</h2>
+
+<a href="dashboard.html">Dashboard</a>
+<a href="clubs.html" class="active">Clubs</a>
+<a href="trainings.html">Trainings</a>
+<a href="applications.html">Applications</a>
+<a href="profile.html">Profile</a>
+<a href="#" onclick="logout()">Logout</a>
+
+</div>
+
+<div class="content">
+
+<h1>Campus Clubs</h1>
+
+<div id="adminSection" style="display:none;">
+
+<h3>Create Club</h3>
+
+<input id="clubName" placeholder="Club Name">
+
+<input id="clubCategory" placeholder="Category">
+
+<textarea id="clubDescription" placeholder="Description"></textarea>
+
+<button onclick="createClub()">
+
+Create Club
+
+</button>
+
+<hr><br>
+
+</div>
+
+<input
+type="text"
+id="search"
+placeholder="Search Club"
+onkeyup="searchClub()">
+
+<br><br>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+
+<th>Category</th>
+
+<th>Leader</th>
+
+<th>Members</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="clubBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/clubs.js"></script>
+
+</body>
+
+</html>
