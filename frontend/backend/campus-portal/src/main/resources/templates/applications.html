@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Applications</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/dashboard" class="nav-brand">🏫 Campus Portal</a>
+            <div class="nav-right">
+                <span id="userName" class="nav-user"></span>
+                <button onclick="logout()" class="btn btn-danger" style="padding:6px 16px;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <h1>📋 My Applications</h1>
+        <p>Track your PT training applications</p>
+        <div id="applicationsContainer"></div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/applications.js"></script>
+</body>
+</html>

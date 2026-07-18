@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <style>
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .admin-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            cursor: pointer;
+            border: 1px solid #e9ecef;
+        }
+        .admin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .admin-card .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .admin-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        .admin-card p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .admin-card .count {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0f3460;
+        }
+        .stats-row {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .stats-row .stat-box {
+            background: #fff;
+            padding: 15px 25px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 120px;
+            border-left: 4px solid #0f3460;
+        }
+        .stats-row .stat-box h4 {
+            color: #888;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        .stats-row .stat-box .num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>🛡️ Admin Panel</h2>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="trainings.html">Trainings</a>
+        <a href="confirmations.html">Confirmations</a>
+        <a href="users.html">Users</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="page-header">
+            <h1>👋 Welcome, Admin</h1>
+            <p>You have full control over the system. Manage users, clubs, trainings, and more.</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <h4>Total Users</h4>
+                <div class="num" id="totalUsers">0</div>
+            </div>
+            <div class="stat-box">
+                <h4>Total Clubs</h4>
+                <div class="num" id="totalClubs">0</div>
+            </div>
+            <div class="stat-box">
+                <h4>Total Trainings</h4>
+                <div class="num" id="totalTrainings">0</div>
+            </div>
+            <div class="stat-box">
+                <h4>Pending Approvals</h4>
+                <div class="num" id="pendingUsers" style="color:#f39c12;">0</div>
+            </div>
+        </div>
+
+        <!-- Admin Control Cards -->
+        <h2>⚡ Quick Actions</h2>
+        <div class="admin-grid">
+            <div class="admin-card" onclick="window.location.href='clubs.html'">
+                <div class="icon">🏛️</div>
+                <h3>Manage Clubs</h3>
+                <p>Create, edit, delete clubs</p>
+            </div>
+            <div class="admin-card" onclick="window.location.href='trainings.html'">
+                <div class="icon">📚</div>
+                <h3>Manage Trainings</h3>
+                <p>Create, edit, delete trainings</p>
+            </div>
+            <div class="admin-card" onclick="window.location.href='confirmations.html'">
+                <div class="icon">✅</div>
+                <h3>Confirmations</h3>
+                <p>Approve or reject users</p>
+            </div>
+            <div class="admin-card" onclick="window.location.href='users.html'">
+                <div class="icon">👥</div>
+                <h3>Manage Users</h3>
+                <p>View, delete users</p>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div style="margin-top:30px;">
+            <h2>📋 Recent Activities</h2>
+            <div id="recentActivities" style="background:#fff;padding:20px;border-radius:12px;margin-top:10px;">
+                <p>Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clubs</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/dashboard" class="nav-brand">🏫 Campus Portal</a>
+            <div class="nav-right">
+                <span id="userName" class="nav-user"></span>
+                <button onclick="logout()" class="btn btn-danger" style="padding:6px 16px;">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <h1>🏛️ All Clubs</h1>
+        <p>Browse and join clubs</p>
+        <div id="clubsContainer"></div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/clubs.js"></script>
+</body>
+</html>

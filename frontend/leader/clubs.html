@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leader - Clubs</title>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>🏫 Leader</h2>
+        <a href="../dashboard.html">Dashboard</a>
+        <a href="clubs.html" class="active">My Clubs</a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="page-header">
+            <h1>📚 My Clubs</h1>
+            <p>Manage your clubs here.</p>
+        </div>
+
+        <!-- CREATE CLUB FORM -->
+        <div class="form-container">
+            <h3>Create New Club</h3>
+            <form id="clubForm">
+                <div class="form-group">
+                    <label>Club Name</label>
+                    <input type="text" id="name" placeholder="Enter club name" required />
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="category">
+                        <option value="Technology">Technology</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Academics">Academics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="description" rows="3" placeholder="Enter description"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Create Club</button>
+            </form>
+        </div>
+
+        <!-- CLUBS TABLE -->
+        <div class="table-container">
+            <h3>Your Clubs</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Leader</th>
+                        <th>Members</th>
+                    </tr>
+                </thead>
+                <tbody id="clubTable">
+                    <tr><td colspan="5">Loading clubs...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/leader-clubs.js"></script>
+</body>
+</html>
